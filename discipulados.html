@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleDisipulado.css">
+  <title>Palabras en Rehoboth</title>
+</head>
+<body>
+  <nav>
+    <img src="https://images.unsplash.com/photo-1616548321627-3c1d17305545?w=600&auto=format&fit=crop&q=60" alt="Logo">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Inicio</a>
+      <a href="discipulados.html">Discipulados</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="radio.html">Emisora</a>
+      <a href="videos.html">Videos</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Palabras en Rehoboth</h1>
+    <p>Un lugar donde la Palabra transforma el corazón y da espacio para crecer</p>
+    <p>Listado de Estudio Discipulados "Conociendo al hombre creado por Dios"</p>
+  </header>  
+  <div class="temas">
+    <a href="https://docs.google.com/document/d/19zcFUH2BkGzSg0nvQQhuxXZyG6mJjmUlOhzbh7oRJV4/edit?usp=sharing" target="_blank">📖 Mi Identidad – Ver discipulado</a>
+  </div>
+  <div class="temas">
+    <a href="#" onclick="solicitarClave('https://docs.google.com/document/d/1OjSQ96DCydTV1UQRCc7roPXEAlS3IYZ7HPcjJeuswh4/edit?usp=sharing')">💪 Carácter – Explora el estudio</a>
+  </div>
+  <div class="temas">
+    <a href="#" onclick="solicitarClave('https://docs.google.com/document/d/1J-u0TAFnbXmxzpPhaMWtnlV74qvqfouyx3gA4HZqg0Y/edit?usp=sharing')">✝️ Cristología – Aprende más</a>
+  </div>
+  <div class="temas">
+    <a href="#" onclick="solicitarClave('https://docs.google.com/document/d/1FoO3ruejnUptHs4FlESi8nheXy45c8WQADAd8JARu8A/edit?usp=sharing')">🧠 Tipos de Mentes – Accede al documento</a>
+  </div>
+  <div class="temas">
+    <a href="#">🔜 ¡Pronto más estudios!</a>
+  </div>
+  <div class="temas1">
+    <a href="index.html" target="_blank">Página Principal</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 Palabras en Rehoboth. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal de clave -->
+  <div id="claveModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <p>Ingresa la clave para acceder</p>
+      <input type="password" id="claveInput" placeholder="Clave..."><br><br>
+      <button onclick="verificarClave()">Acceder</button>
+      <p id="mensajeError" class="error"></p>
+    </div>
+  </div>
+
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>
