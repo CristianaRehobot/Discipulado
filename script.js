@@ -18,7 +18,7 @@ function cerrarModal() {
 
 function verificarClave() {
   const clave = document.getElementById("claveInput").value;
-  const claveCorrecta = "2025"; // Cambia esta clave si quieres
+  const claveCorrecta = "55"; // Cambia esta clave si quieres
 
   if (clave === claveCorrecta) {
     window.open(enlaceDestino, "_blank");

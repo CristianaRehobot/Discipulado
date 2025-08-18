@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="StyleAptitudSeguirJesus.css">
+  <title>Palabras en Rehoboth</title>
+  <style>
+    /* Estilos básicos del modal */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center; align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 300px;
+      position: relative;
+    }
+    .modal-content img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="logo.png" style="height: 10vh;" alt="Logo" />
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Inicio</a>
+      <a href="MenuDisipulados.html">Discipulados</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="radio.html">Emisora</a>
+      <a href="videos.html">Videos</a>
+    </div>
+  </nav>
+
+<header>
+    <h1>Has llegado a la segunda parte del discipulado</h1>
+    <p>¿Estás dispuesto a seguir a Cristo?</p>
+    <p>Continúa adelante y permite que la Palabra transforme tu vida, fortaleciendo tu fe y motivación para crecer cada día.</p>
+</header>
+
+
+  <!-- GRID de discipulados -->
+  <section class="grid-temas">
+    <div class="card-wrapper">
+        <a href="#" onclick="solicitarClave('https://docs.google.com/presentation/d/1V5AaA8l-76TzHwaHlifnJHmLrtEqW5QslomAYd6RNJo/edit?usp=sharing')"
+           style="background-image: url('https://www.mailerlite.com/img/containers/assets/blog/blog-image_instagram-followers-feature.jpg/51f2f45e768156eb656a67581e115382.webp');">
+          <span>Cual es Tu Actitud <br>
+             "Comó seguidor de Jesús"</span>
+        </a>
+        <button href="/">Examen Discipulados</button>
+    </div>
+<div class="card-wrapper">
+    <a href="#" onclick="solicitarClave('https://docs.google.com/presentation/d/1O2diXvTJ6Bt3e0lP-2KO9sG4AI8dNexHG_WXUidAaRc/edit?usp=sharing')"
+       style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg');">
+      <span>¿Por qué?<br> 
+        "Debemos de Estudiar la Historia de la Bilia"</span>
+    </a>
+    <button href="/">Examen Discipulados</button>
+</div>
+<div class="card-wrapper">
+    <a href="#" onclick="solicitarClave('https://docs.google.com/presentation/d/1rZtP41Xa36POFSxwu3dum57YXNUShdY3QBQJB286Mf8/edit?usp=sharing')"
+       style="background-image: url('https://ministerio.us/wp-content/uploads/2015/10/1.shutterstock_141036109.jpg');">
+      <span>Aprender de Jesús<br>
+         El verdadero Discipulado</span>
+    </a>
+      <button href="/">Examen Discipulados</button>
+</div>
+<div class="card-wrapper">
+     <a href="#" onclick="solicitarClave('https://docs.google.com/presentation/d/1AtO8juf0m6vEoEWnIhRdyp8YZl_VNaMx/edit?usp=sharing&ouid=105413867799879166424&rtpof=true&sd=true')"
+       style="background-image: url('https://cdn.colombia.com/sdi/2022/05/17/oracion-hoy-reza-para-recuperar-trabajo-has-perdido-1028196.jpg');">
+      <span>Dime comó oras <br>
+         Y te dire que tipo de cristriano éres</span>
+    </a>
+      <button href="/">Examen Discipulados</button>
+</div>
+<div class="card-wrapper">
+     <a href="#" onclick="solicitarClave('https://docs.google.com/presentation/d/1rZtP41Xa36POFSxwu3dum57YXNUShdY3QBQJB286Mf8/edit?usp=sharing')"
+      style="background-image: url('https://www.gotquestions.org/Espanol/img/comenzando-leer-Biblia.jpg');">
+     <span>¿Has leido la biblia<br>
+        quizas si quizas no?</span>
+    </a>
+     <button href="/">Examen Discipulados</button>
+</div>
+<div class="card-wrapper">
+    <a href="#" onclick="solicitarClave('https://docs.google.com/presentation/d/1rZtP41Xa36POFSxwu3dum57YXNUShdY3QBQJB286Mf8/edit?usp=sharing')"
+      style="background-image: url('https://www.rca.org/wp-content/uploads/2016/07/iStock_000003196377.png');">
+     <span>Cuando haces discipulado<br>
+       Dios está con tigo</span>
+    </a>  
+     <button href="/">Examen Discipulados</button>
+</div>
+</section>
+ <div class="temas1">
+    <a href="index.html" target="_blank">Página Principal</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 Palabras en Rehoboth. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="claveModal" class="modal">
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.293);">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <img src="logo.png" alt="Logo">
+      <p>Ingresa la clave para acceder</p>
+      <input type="password" id="claveInput" placeholder="Clave..."><br><br>
+      <button onclick="verificarClave()">Acceder</button>
+      <p id="mensajeError" class="error"></p>
+    </div>
+  </div>
+
+  <script>
+     function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    let enlaceDestino = "";
+
+    function solicitarClave(url) {
+      enlaceDestino = url;
+      document.getElementById("claveModal").style.display = "flex";
+    }
+
+    function cerrarModal() {
+      document.getElementById("claveModal").style.display = "none";
+      document.getElementById("mensajeError").textContent = "";
+      document.getElementById("claveInput").value = "";
+    }
+
+    function verificarClave() {
+      const clave = document.getElementById("claveInput").value;
+      const claveCorrecta = "1234"; // 🔑 Cambia esto por tu clave real
+      if (clave === claveCorrecta) {
+        window.open(enlaceDestino, "_blank");
+        cerrarModal();
+      } else {
+        document.getElementById("mensajeError").textContent = "Clave incorrecta. Intenta nuevamente.";
+      }
+    }
+  </script>
+</body>
+</html>

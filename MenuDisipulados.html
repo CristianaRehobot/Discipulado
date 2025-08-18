@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleDisipulado.css">
+  <title>Palabras en Rehoboth</title>
+  <style>
+    /* Estilos básicos del modal */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center; align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 300px;
+      position: relative;
+    }
+    .modal-content img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="logo.png" style="height: 10vh;" alt="Logo" />
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Inicio</a>
+      <a href="MenuDisipulados.html">Discipulados</a>
+      <a href="testimonios.html">Testimonios</a>
+      <a href="radio.html">Emisora</a>
+      <a href="videos.html">Videos</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Palabras en Rehoboth</h1>
+    <p>Un lugar donde la Palabra transforma el corazón y da espacio para crecer</p>
+    <p>Listado de Estudio Discipulados "Conociendo al hombre creado por Dios"</p>
+  </header>  
+
+  <!-- GRID de discipulados -->
+  <section class="grid-temas">
+  <a href="https://cristianarehobot.github.io/Discipulado/discipulados.html" target="_blank"
+     style="background-image: url('https://christskingdom.org/wp-content/uploads/2019/03/lightstock_3964_medium_marsha-1024x576.jpg');">
+    <span>Primer Discipulado <br>
+       "Mi Identidad"</span>
+  </a>
+
+  <a href="#" onclick="solicitarClave('http://127.0.0.1:5500/AptitudSeguirJesus.html')" 
+     style="background-image: url('https://cdn0.psicologia-online.com/es/posts/0/3/1/algunas_ideas_para_superar_la_indecision_1130_orig.jpg');">
+    <span>Segundo Discipulado <br> 
+      "Aptitud de Seguir A Jesús"</span>
+  </a>
+
+   <a href="#" onclick="solicitarClave('trabajando.html')"
+     style="background-image: url('https://www.semilladevidachurch.com/wp-content/uploads/2018/11/Imagenes-Discipilado-Avanzado-Nivel-ll.jpg');">
+    <span>Tercer Discipulado <br>
+       Formación de Líderes</span>
+  </a>
+
+  <a href="#" onclick="solicitarClave('trabajando.html')"
+     style="background-image: url('https://cvclavoz.com/wp-content/uploads/2023/07/Nada-esta-perdido-W1.jpg');">
+    <span>Cuarto Discipulado <br>
+       Mi llamado Personal</span>
+  </a>
+   <a href="#" onclick="solicitarClave('trabajando.html')"
+     style="background-image: url('https://amcselekt.es/blog/wp-content/uploads/2022/01/sectas-estudio.jpg');">
+    <span>Quinto Discipulado <br>
+       Sectas</span>
+  </a>
+   <a href="#" onclick="solicitarClave('trabajando.html')"
+     style="background-image: url('https://es.kcm.org/wp-content/uploads/2016/09/0927shutterstock_1066494web.jpg');">
+    <span>Sexto Discipulado <br>
+      Guerra Espiritual</span>
+  </a>  
+</section>
+ <div class="temas1">
+    <a href="index.html" target="_blank">Página Principal</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 Palabras en Rehoboth. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="claveModal" class="modal">
+    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.293);">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <img src="logo.png" alt="Logo">
+      <p>Ingresa la clave para acceder</p>
+      <input type="password" id="claveInput" placeholder="Clave..."><br><br>
+      <button onclick="verificarClave()">Acceder</button>
+      <p id="mensajeError" class="error"></p>
+    </div>
+  </div>
+
+  <script>
+     function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+      }
+    let enlaceDestino = "";
+
+    function solicitarClave(url) {
+      enlaceDestino = url;
+      document.getElementById("claveModal").style.display = "flex";
+    }
+
+    function cerrarModal() {
+      document.getElementById("claveModal").style.display = "none";
+      document.getElementById("mensajeError").textContent = "";
+      document.getElementById("claveInput").value = "";
+    }
+
+    function verificarClave() {
+      const clave = document.getElementById("claveInput").value;
+      const claveCorrecta = "1234"; // 🔑 Cambia esto por tu clave real
+      if (clave === claveCorrecta) {
+        window.open(enlaceDestino, "_blank");
+        cerrarModal();
+      } else {
+        document.getElementById("mensajeError").textContent = "Clave incorrecta. Intenta nuevamente.";
+      }
+    }
+  </script>
+
+</body>
+</html>

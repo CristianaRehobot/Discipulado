@@ -229,101 +229,74 @@ footer {
 
   
 }
-
-
+/* Grid de discipulados */
 .grid-temas {
   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   min-width: 20px;
-   min-height: 320px;
-  gap: 40px;
-  padding: 30px;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas por defecto */
+  gap: 20px; /* Espacio entre cards */
+  padding: 20px;
 }
 
-.grid-temas a {
-  display: flex;
-  align-items: flex-end; /* texto abajo */
-  justify-content: center;
-  text-decoration: none;
-  background-size: cover;    /* imagen ocupa todo */
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 12px;
-  min-height: 200px;
+/* Cada card con su botón */
+.grid-temas a, .grid-temas button {
+  display: block;
   width: 100%;
-  color: white;
-  font-weight: bold;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
   text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.grid-temas a span {
-  background: rgba(0,0,0,0.6); /* sombreado para legibilidad */
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.grid-temas a:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-
-.grid-temas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
-  gap: 40px;
-  padding: 30px;
-  justify-items: center;
-}
-
-/* Cada card cuadrada */
+/* Estilo de las cards */
 .grid-temas a {
-  aspect-ratio: 1 / 1;   /* 🟦 Mantiene cuadrado */
-  width: 100%;
-  border-radius: 12px;
+  height: 200px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
   padding: 10px;
-
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .grid-temas a span {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
-/* Hover */
-.grid-temas a:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
+/* Estilo de los botones debajo de cada card */
+.grid-temas button {
+  margin-top: 10px; /* Separación debajo de la card */
+  padding: 10px;
+  background-color: #136d69ab;
+  border: none; 
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
-/* Responsive */
+.grid-temas button:hover {
+  background-color: #0056b3;
+}
+
+/* RESPONSIVE: Pantallas medianas */
 @media (max-width: 900px) {
   .grid-temas {
-    grid-template-columns: repeat(2, 1fr); /* tablet: 2 */
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
   }
 }
 
+/* RESPONSIVE: Pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
   .grid-temas {
-    grid-template-columns: 1fr; /* móvil: 1 */
+    grid-template-columns: 1fr; /* 1 columna */
   }
 }
