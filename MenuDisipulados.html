@@ -16,6 +16,8 @@
   <meta name="twitter:title" content="Palabras en Rehoboth" />
   <meta name="twitter:description" content="Un lugar donde la Palabra transforma el corazón y da espacio para crecer." />
   <meta name="twitter:image" content="https://transformaelmundo.com/wp-content/uploads/2019/06/istockphoto-847575018-612x612.jpg?w=569&h=379" />
+  <meta name="theme-color" content="#0d6efd">
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="https://play-lh.googleusercontent.com/rHBUpZ2BkCLkNShQpXzogon8467UuYP9aA1V-xks5V5yekgYP3E4JgATIGcalpvJ-Q=w240-h480-rw" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -174,6 +176,11 @@
         document.getElementById("mensajeError").textContent = "Clave incorrecta. Intenta nuevamente.";
       }
     }
+    if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+      .then(() => console.log("Service Worker registrado"))
+      .catch(err => console.error("Error al registrar Service Worker", err));
+  }
   </script>
 
 </body>
